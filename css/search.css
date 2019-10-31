@@ -1,0 +1,128 @@
+:root {
+	--primary-color: rgba(0, 0, 0, 0.44);
+	--accent-color: #009845;
+
+	--text-color: #fff;
+	--text-color2: #505050;
+	--body-color: #242424;
+	--main-font: 'roboto';
+	--font-bold: 700;
+	--font-regular: 400;
+}
+* { 
+    box-sizing: border-box;
+}
+
+body {
+/*
+    background-image: url(../images/3.jpg);
+    background-position: center;
+    background-attachment: fixed;
+*/
+	color: var(--text-color2);
+	font-family: var(--main-font), Arial;
+	font-weight: var(--font-regular);
+    overflow-x: hidden;
+}
+main{ 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+}
+.para {
+    margin: 3% 10% 3% 10%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.btn-success {
+    padding: 1% 7%;
+    margin-top: 3%;
+    border-radius: 30px;
+    color: #fff !important;
+    font-size: 15px;
+    background-color: #009845;
+}
+
+.btn-success a {
+    text-decoration: none;
+    color: #fff !important;
+}
+
+.btn-success i {
+    margin-right: 10px;
+}
+h1 { font-weight: var(--font-bold) }
+input, 
+button {
+	border: none;
+	background: none;
+	outline: 0;
+}
+button {cursor: pointer}
+.SearchBox-input::placeholder {/* No es un seudoelemento estandar */
+ color:white;
+	opacity: .6;
+}
+/* Chrome, Opera ySafari */
+.SearchBox-input::-webkit-input-placeholder {
+  color: white;
+}
+/* Firefox 19+ */
+.SearchBox-input::-moz-placeholder {
+  color: white;
+}
+/* IE 10+ y Edge */
+.SearchBox-input:-ms-input-placeholder {
+  color: white;
+}
+/* Firefox 18- */
+#formGroupExampleInput:-moz-placeholder {
+  color: white;
+}
+
+
+
+.SearchBox {
+	--height: 4em;
+	display: flex;
+	
+	border-radius: var(--height);
+	background-color: var(--primary-color);
+}
+	.SearchBox:hover .SearchBox-input {
+		padding-left: 2em;
+		padding-right: 1em;
+		width: 240px;
+	}
+	.SearchBox-input {
+		width: 0;
+		font-size: 1.2em;
+		color: #fff;
+		transition: .45s;
+	}
+	.SearchBox-button {
+		display: flex;
+		border-radius: 50%;
+		width: var(--height);
+		height: var(--height);
+		background-color: var(--accent-color);
+		transition: .3s;
+	}
+	.SearchBox-button:active  {
+		transform: scale(.85);
+	}
+	.SearchBox-icon {
+		margin: auto;
+		color: #fff;
+	}
+
+
+@media screen and (min-width: 400px){
+	.SearchBox:hover .SearchBox-input {
+		width: 500px;
+	}
+}
